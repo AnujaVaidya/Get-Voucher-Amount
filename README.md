@@ -85,7 +85,9 @@ For the API request coming in, an API Gateway can be set.
 
 
 **_Setting Up:_**
+
 The docker image can eb built by: docker build --tag python-flask .
-![dh7.png](screenshots/dh7.png)
+![dh7.png](screenshots/DH7.png)
+
 I ran the main.py by running the main.py
-![dh8.png](screenshots/dh8.png)
+![dh8.png](screenshots/DH8.png)
