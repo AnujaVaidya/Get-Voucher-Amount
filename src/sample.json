@@ -1,0 +1,8 @@
+{
+"customer_id": 123,
+	 "country_code": "Peru",
+	 "last_order_ts": "2018-05-03 00:00:00",
+	 "first_order_ts": "2017-05-03 00:00:00",
+	 "total_orders": 15,
+	 "segment_name": "recency_segment"
+    }
