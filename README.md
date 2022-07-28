@@ -1,20 +1,18 @@
-Delivery Hero:
-
 Logic:
 Looking at the Dataframe in Parquet:
 
 
-![dh3.png](screenshots/dh3.png)
+![dh3.png](screenshots/h3.png)
 
 
 1. total_orders and voucher_amount had some null values in the field.
 So I set the columns with null, ‘’ or “ “ values to 0.00 value.
 
 
-![dh4.png](screenshots/dh4.png)
+![dh4.png](screenshots/h4.png)
 2. Next, based on the’ total_orders ‘– I set a frequency_segment
 and based on ‘timestamp ‘and ‘last_order_ts ´day’s difference – I set the recency_segment.
-![dh5.png](screenshots/dh5.png)
+![dh5.png](screenshots/h5.png)
 
 
 3. Based on segment passed in API,
@@ -22,7 +20,7 @@ and the time range within the which the customer request was send and correspond
 
 I filter out all voucher amounts.
 
-![dh1.png](screenshots/dh1.png)
+![dh1.png](screenshots/h1.png)
 
 
 and send the maximum voucher amount for the segment.
@@ -30,7 +28,7 @@ and send the maximum voucher amount for the segment.
 
 Then a maximum count of the voucher amount was sent back to the Postman.
 
-![dh2.png](screenshots/dh2.png)
+![dh2.png](screenshots/h2.png)
 
 
 Assumptions:
@@ -59,7 +57,7 @@ After these two columns were set and given that each row in df corresponds to a 
 And then grouped different voucher amount 
 
 
-![dh1.png](screenshots/dh1.png)
+![dh1.png](screenshots/h1.png)
 
 
 
@@ -87,7 +85,7 @@ For the API request coming in, an API Gateway can be set.
 **_Setting Up:_**
 
 The docker image can eb built by: docker build --tag python-flask .
-![dh7.png](screenshots/DH7.png)
+![dh7.png](screenshots/H7.png)
 
 I ran the main.py by running the main.py
-![dh8.png](screenshots/DH8.png)
+![dh8.png](screenshots/H8.png)
