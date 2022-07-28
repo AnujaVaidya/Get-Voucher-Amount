@@ -21,6 +21,7 @@ and based on ‘timestamp ‘and ‘last_order_ts ´day’s difference – I set
 and the time range within the which the customer request was send and corresponding dataframe entries for the same time period,
 
 I filter out all voucher amounts.
+
 ![dh1.png](screenshots/dh1.png)
 
 
@@ -56,6 +57,8 @@ In case the number of days is > 180 or < 30, the regency_segemnt column would be
 After these two columns were set and given that each row in df corresponds to a different customer, we look for the segment value from request API and also find the time period same as given API last and first order ts, so any matching segment which also falls in between the given time period will be stored in the df.
 
 And then grouped different voucher amount 
+
+
 ![dh1.png](screenshots/dh1.png)
 
 
@@ -69,7 +72,8 @@ There can be multiple test cases added –
 Etc.
 
 
-Scalable Solutions:
+
+**_Scalable Solutions:_**
 Incase of large files, the parquet files can be stored on AWS S3 or a similar service on GCP.
 Since AWS S3 is scalable – the files can be stored partitioned on the basis on year. Partition on basis on year can give a faster way to find that year’s voucher amount.
 
@@ -80,7 +84,7 @@ For the API request coming in, an API Gateway can be set.
 
 
 
-Setting Up:
+**_Setting Up:_**
 The docker image can eb built by: docker build --tag python-flask .
 ![dh7.png](screenshots/dh7.png)
 I ran the main.py by running the main.py
