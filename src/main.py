@@ -31,7 +31,7 @@ def process_json():
         # Making total_orders and voucher_amount to 0.00 in case of null/empty values
         df = df.filter(df.country_code == country)
         df = df.withColumn("total_orders",
-                           when((df.voucher_amount.isNull()) | (df.voucher_amount == "") | (df.voucher_amount == " "),
+                           when((df.total_orders.isNull()) | (df.total_orders == "") | (df.total_orders == " "),
                                 "0")
                            .otherwise(df.voucher_amount))
         df = df.withColumn("voucher_amount", when(df.voucher_amount.isNull(), "0.00")
